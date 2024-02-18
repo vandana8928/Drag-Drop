@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.column {
+  width: calc(33.33% - 20px);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1130px) {
+  .column-inner {
+    width: 80%; /* Take up the full width */
+  }
+ 
+}
+
+.column-inner {
+  border-radius: 10px;
+  height: 80%;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Adding transition */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  height: 50%;
+}
+
+.card-body  {
+  text-align: center;
+  font-size: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+}
+.search-bar {
+  margin: 20px 0px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.search-bar input[type="search"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  outline: none;
+}
+.card-body .btn {
+  background: black;
+  color: white;
+ 
+  align-items: center;
+  width: 150px;
+  margin: auto;
+}
+
+.card img {
+  display: block;
+  margin: 10px auto; /* This centers the image horizontally */
+  width: 20%; /* Set the width to 50% */
+  height: 5%; /* Set the height to 50% */
+ 
+}
+
+.column-inner::-webkit-scrollbar {
+  width: 12px; /* width of the scrollbar */
+}
+
+/* Track */
+.column-inner::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the track */
+}
+
+/* Handle */
+.column-inner::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scrollbar handle */
+  border-radius: 6px; /* roundness of the handle */
+}
+
+/* Handle on hover */
+.column-inner::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scrollbar handle on hover */
+}
