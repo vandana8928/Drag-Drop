@@ -13,6 +13,8 @@
   height: 400px;
   display: flex;
   flex-direction: column;
+  border-left: 1px dashed rgba(18, 1, 1, 0.55);
+  
 
 }
 
@@ -103,3 +105,14 @@
 }
 
 
+
+.column:before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 30px;
+  bottom: 5px;
+  width: 2px;
+  border-left: 1px dashed #d7dee1;
+  z-index: 9;
+}
