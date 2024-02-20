@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <style>
+    .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+    .spinner {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+    
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
+  <body>
+
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Content -->
+  <div class="content">
+    <p>This is the main content of the page.</p>
+  </div>
+
+  <script>
+    // Simulate content loading
+    setTimeout(function() {
+      // Hide loader
+      document.querySelector('.loader').style.display = 'none';
+      // Show content
+      document.querySelector('.content').style.display = 'block';
+    }, 3000); // Adjust the delay as needed
+  </script>
+
+  </body>
+</html>

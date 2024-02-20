@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: antiquewhite;
+}
+
+.main-div{
+    width: 600px;
+    height: 300px;
+    padding: 30px;
+    background-color: rgb(175, 189, 189);
+    border-radius: 10px;
+    clip-path: circle(50% at 99% 2%);
+}
+.main-div h1{
+    margin: 30px 0;
+    color:black;
+  
+}
+.main-div p{
+    line-height: 160%;
+    color:black;
+}
+.main-div h3{
+    color: white ;
+    margin-top: 20px;
+}
+.main-div:hover{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}

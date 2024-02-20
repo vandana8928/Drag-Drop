@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Page</title>
+<style>
+  /* Loader styles */
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #333;
+    border-top: 5px solid #aaa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Content styles */
+  .content {
+    display: none; /* Hide content by default */
+  }
+
+  /* Simulating content */
+  .content p {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <p>This is the main content of the page.</p>
+  </div>
+
+  <script>
+    // Simulate content loading
+    setTimeout(function() {
+      // Hide loader
+      document.querySelector('.loader').style.display = 'none';
+      // Show content
+      document.querySelector('.content').style.display = 'block';
+    }, 3000); // Adjust the delay as needed
+  </script>
+</body>
+</html>

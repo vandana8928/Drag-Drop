@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop Cards</title>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .column {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .card {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="column" id="left-column" ondrop="drop(event, 'left-column')" ondragover="allowDrop(event)">
+    <div class="card" draggable="true" ondragstart="drag(event)">Card 1</div>
+    <div class="card" draggable="true" ondragstart="drag(event)">Card 2</div>
+  </div>
+  <div class="column" id="middle-column" ondrop="drop(event, 'middle-column')" ondragover="allowDrop(event)">
+    <!-- Middle column -->
+  </div>
+  <div class="column" id="right-column" ondrop="drop(event, 'right-column')" ondragover="allowDrop(event)">
+    <!-- Right column -->
+  </div>
+</div>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+}
+
+function drop(ev, columnId) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text/plain");
+  var draggedElement = document.getElementById(data);
+  var column = document.getElementById(columnId);
+  column.appendChild(draggedElement);
+}
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop Cards</title>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .column {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .card {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="column" id="left-column" ondrop="drop(event, 'left-column')" ondragover="allowDrop(event)">
+    <div class="card" draggable="true" ondragstart="drag(event)">Card 1</div>
+    <div class="card" draggable="true" ondragstart="drag(event)">Card 2</div>
+  </div>
+  <div class="column" id="middle-column" ondrop="drop(event, 'middle-column')" ondragover="allowDrop(event)">
+    <!-- Middle column -->
+  </div>
+  <div class="column" id="right-column" ondrop="drop(event, 'right-column')" ondragover="allowDrop(event)">
+    <!-- Right column -->
+  </div>
+</div>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+}
+
+function drop(ev, columnId) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text/plain");
+  var draggedElement = document.getElementById(data);
+  var column = document.getElementById(columnId);
+  column.appendChild(draggedElement);
+}
+</script>
+</body>
+</html>
