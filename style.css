@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  .drag-for-phone {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .drag-for-phone .column {
+    width: calc(33.33% - 20px);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    
+  
+  }
+  
+  @media (min-width: 1131px) {
+    .drag-for-phone .column {
+        display: none;
+    }
+}
+  
+  .drag-for-phone .column-inner {
+    border-radius: 10px;
+    height: 80%;
+    padding: 20px;
+    overflow-y: auto;
+    width: 100%;
+  
+    
+     
+  }
+  
+  .drag-for-phone .card {
+    cursor: pointer;
+    transition: background-color 0.3s; /* Adding transition */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+    
+    margin:auto;
+    margin-bottom: 10px;
+  }
+  
+  .drag-for-phone .card-body  {
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .drag-for-phone .card:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+  }
+  .drag-for-phone .search-bar {
+    margin: 20px 0px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .drag-for-phone  .search-bar input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+  }
+  .drag-for-phone .card-body .btn {
+    background: black;
+    color: white;
+    align-items: center;
+    width: 150px;
+    margin: auto;
+  }
+  
+  .drag-for-phone .card img {
+    display: block;
+    margin: 10px auto; /* This centers the image horizontally */
+    width: 20%; /* Set the width to 50% */
+    height: 5%; /* Set the height to 50% */
+   
+  }
+  
+  .drag-for-phone .column-inner::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+  }
+  
+  /* Track */
+  .drag-for-phone .column-inner::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the track */
+  }
+  
+  /* Handle */
+  .drag-for-phone .column-inner::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scrollbar handle */
+    border-radius: 6px; /* roundness of the handle */
+  }
+  
+  /* Handle on hover */
+  .drag-for-phone  .column-inner::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scrollbar handle on hover */
+  }
+  
+  
+  
+  .drag-for-phone .column:before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 30px;
+    bottom: 5px;
+    width: 2px;
+    border-left: 1px dashed #d7dee1;
+    z-index: 9;
+  }
+  
+  @media (max-width: 576px) {
+    .drag-for-phone  {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .drag-for-phone .column {
+        width: 100%;
+    }
+  }

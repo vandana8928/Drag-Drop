@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="stylesheet" href="style1.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+    <div id="left" class="column">
+        <div class="search-bar">
+            <input type="search" placeholder="Booked Appointment... " onkeyup="filterCards('left-column', this.value)" />
+        </div>
+        <div class="column-inner" id="left-column">
+
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 30</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRight()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more client cards here -->
+
+        </div>
+    </div>
+    <!-- Add middle and right columns here -->
+
+
+    <div id="middle" class="column">
+        <div class="search-bar">
+          <input type="search" placeholder="On Going Process...."
+          onkeyup="filterCards('middle-column', this.value)"
+           />
+        </div>
+      
+        <div class="column-inner" id="middle-column"></div>
+      </div>
+    
+     
+      <div id="right" class="column">
+        <div class="search-bar">
+          <input type="search" placeholder="Completed.."
+          onkeyup="filterCards('right-column', this.value)" />
+        </div>
+      
+        <div class="column-inner" id="right-column"></div>
+      </div>
+</div>
+
+
+
+
+<script>
+    function enableDragFunctionality() {
+        let lists = document.querySelectorAll('.list');
+        let middleColumn = document.getElementById('middle-column');
+        let rightColumn = document.getElementById('right-column');
+        let leftColumn = document.getElementById('left-column');
+        let selected; // Declare selected variable outside event listeners
+    
+        // Drag functionality for elements in all columns
+        lists.forEach(list => {
+            list.addEventListener('dragstart', function (e) {
+                selected = e.target;
+            });
+        });
+    
+        // Drop functionality for middle column
+        middleColumn.addEventListener('dragover', function (e) {
+            e.preventDefault();
+        });
+        middleColumn.addEventListener('drop', function (e) {
+            middleColumn.appendChild(selected);
+            selected = null;
+        });
+    
+        // Drop functionality for right column
+        rightColumn.addEventListener('dragover', function (e) {
+            e.preventDefault();
+        });
+        rightColumn.addEventListener('drop', function (e) {
+            rightColumn.appendChild(selected);
+            selected = null;
+        });
+    
+        // Drop functionality for left column
+        leftColumn.addEventListener('dragover', function (e) {
+            e.preventDefault();
+        });
+        leftColumn.addEventListener('drop', function (e) {
+            leftColumn.appendChild(selected);
+            selected = null;
+        });
+    }
+    
+    // Call the function to enable drag functionality
+    enableDragFunctionality();
+    
+ // Search by client
+function filterCards(containerId, searchText) {
+  const cards = document.querySelectorAll(`#${containerId} .card`);
+  searchText = searchText.toLowerCase();
+  cards.forEach(card => {
+      const title = card.querySelector('.card-title').innerText.toLowerCase();
+      const description = card.querySelector('.card-description').innerText.toLowerCase();
+      const age = card.querySelector('.card-age').innerText.toLowerCase();
+      const availability = card.querySelector('.card-availability').innerText.toLowerCase();
+      if (title.includes(searchText) || description.includes(searchText) || age.includes(searchText) || availability.includes(searchText)) {
+          card.style.display = 'block';
+      } else {
+          card.style.display = 'none';
+      }
+  });
+}
+
+function moveToMiddle() {
+  const selectedCard = document.querySelector('#left-column .card.list');
+  if (selectedCard) {
+    document.getElementById('middle-column').appendChild(selectedCard);
+  }
+}
+
+function moveToRight() {
+  const selectedCard = document.querySelector('#left-column .card.list');
+  if (selectedCard) {
+    document.getElementById('right-column').appendChild(selectedCard);
+  }
+}
+
+function moveFromMiddleToRight() {
+  const selectedCard = document.querySelector('#middle-column .card.list');
+  if (selectedCard) {
+    document.getElementById('right-column').appendChild(selectedCard);
+  }
+}
+
+function moveFromRightToMiddle() {
+  const selectedCard = document.querySelector('#right-column .card.list');
+  if (selectedCard) {
+    document.getElementById('middle-column').appendChild(selectedCard);
+  }
+}
+</script>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
