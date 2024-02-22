@@ -13,7 +13,8 @@
   height: 400px;
   display: flex;
   flex-direction: column;
-  border-left: 1px dashed rgba(18, 1, 1, 0.55);
+  border-left: 1px  rgba(18, 1, 1, 0.55);
+  border-right: 1px  rgba(18, 1, 1, 0.55);
   
 
 }
@@ -241,5 +242,11 @@
   
   .drag-for-phone .column {
       width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container.cli {
+      display: none;
   }
 }
