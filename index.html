@@ -10,6 +10,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -117,6 +120,219 @@
       <div class="column-inner" id="right-column"></div>
     </div>
   </div>
+
+
+
+  <!----phone -->
+
+
+
+  <div class="container drag-for-phone">
+    <div id="left" class="column">
+        <div class="search-bar">
+            <input type="search" placeholder="Booked Appointment... " onkeyup="filterCards('left-column', this.value)" />
+        </div>
+        <div class="column-inner" id="left-column-phone">
+
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 30</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 30</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 30</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 30</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 30</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 30</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 28</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 34</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card list " draggable="true" style="width: 18rem">
+                <img src="https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png" class="card-img-top" alt="Placeholder Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Client 1</h5>
+                    <p class="card-text card-description">Practice Area: Practice Area 1</p>
+                    <p class="card-text card-age">Age 35</p>
+                    <p class="card-text card-availability">Availability: Monday to Friday, 9 AM to 5 PM</p>
+                    <div class="dropdown dropup">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Read More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Booked Appointment...</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToMiddle()">Ongoing process</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moveToRightFromMiddle()">Completed..</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more client cards here -->
+
+        </div>
+    </div>
+    <!-- Add middle and right columns here -->
+
+
+    <div id="middle" class="column">
+        <div class="search-bar">
+          <input type="search" placeholder="On Going Process...."
+          onkeyup="filterCards('middle-column', this.value)"
+           />
+        </div>
+      
+        <div class="column-inner" id="middle-column-phone"></div>
+      </div>
+    
+     
+      <div id="right" class="column">
+        <div class="search-bar">
+          <input type="search" placeholder="Completed.."
+          onkeyup="filterCards('right-column', this.value)" />
+        </div>
+      
+        <div class="column-inner" id="right-column-phone"></div>
+      </div>
+</div>
+<!---end phone-->
     <script>
         function enableDragFunctionality() {
             let lists = document.querySelectorAll('.list');
@@ -179,6 +395,31 @@
           }
       });
     }
+
+
+
+
+    function moveToMiddle() {
+      const selectedCard = document.querySelector('#left-column-phone .card.list');
+      if (selectedCard) {
+        document.getElementById('middle-column-phone').appendChild(selectedCard);
+      }
+    }
+    
+    function moveToRight() {
+      const selectedCard = document.querySelector('#left-column-phone .card.list');
+      if (selectedCard) {
+        document.getElementById('right-column-phone').appendChild(selectedCard);
+      }
+    }
+    
+    function moveToRightFromMiddle() {
+        const selectedCard = document.querySelector('#middle-column-phone .card.list');
+        if (selectedCard) {
+            document.getElementById('right-column-phone').appendChild(selectedCard);
+        }
+    }
+    
     </script>
   </body>
 </html>
